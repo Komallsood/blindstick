@@ -1,7 +1,7 @@
 #define trigPin 2
-#define echoPin 3
-#define buzzer 4
-#define moisturePin 36 // Use GPIO36 for A0 equivalent on ESP32
+#define echoPin 4
+#define buzzer 
+#define moisturePin 18 
 #define powerIndicatorPin 13
 
 long ultrasonicDuration;
@@ -13,12 +13,9 @@ void setup() {
   pinMode(echoPin, INPUT);
   pinMode(buzzer, OUTPUT);
   pinMode(moisturePin, INPUT);
-  pinMode(ledPin, OUTPUT);
   pinMode(powerIndicatorPin, OUTPUT);
 
   Serial.begin(9600);
-
-  // Turn on power indicator LED
   digitalWrite(powerIndicatorPin, HIGH);
 }
 
